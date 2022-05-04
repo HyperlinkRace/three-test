@@ -10,6 +10,7 @@
     <meta http-equiv="Expires" content="0">
     <title>Build a puzzle in VR - Play now in your browser for free</title>
     <style>
+
         html {
             scroll-behavior: smooth;
         }
@@ -257,6 +258,7 @@
             -ms-user-select: none;
             user-select: none;
         }
+
         .cb-container input {
             position: absolute;
             opacity: 0;
@@ -264,6 +266,7 @@
             height: 0;
             width: 0;
         }
+
         .checkmark {
             position: absolute;
             top: 0;
@@ -272,20 +275,25 @@
             width: 25px;
             background-color: #eee;
         }
+
         .cb-container:hover input~.checkmark {
             background-color: #ccc;
         }
+
         .cb-container input:checked~.checkmark {
             background-color: #a8a8a8;
         }
+
         .checkmark:after {
             content: "";
             position: absolute;
             display: none;
         }
+
         .cb-container input:checked~.checkmark:after {
             display: block;
         }
+
         .cb-container .checkmark:after {
             left: 9px;
             top: 5px;
@@ -334,6 +342,17 @@
         div#roadmap li {
             margin: 10px 0;
         }
+
+        @keyframes bgScroll {
+            0% {
+                background-position: 0px 0px
+            }
+
+            100% {
+                background-position: -512px 0px
+            }
+        }
+        
     </style>
 </head>
 
@@ -359,7 +378,7 @@
             <button class="play" id="play-btn">
                 CONTINUE
             </button>
-            <span style="width: 90%; margin-top: 15px; display: block; text-align: center;">A VR headset and a
+            <span style="width: 90%; margin-top: 15px; display: block; text-align: center;">*A VR headset and a
                 controller are required</span>
         </div>
         <div class="prev" id="prev-image">
@@ -370,7 +389,7 @@
         </div>
         <div class="header">
             <h1>Build a puzzle in VR</h1>
-            <span>Play directly on your browser</span>
+            <span>Play it directly in your browser</span>
         </div>
         <div class="footer">
             <div class="nav">
@@ -385,8 +404,8 @@
             <li>Troubleshoot compatibility issues</li>
             <li>Add more images</li>
             <li>In-game menu, adjust the play area</li>
-            <li>More puzzle types</li>
-            <li>Improve performance when many pieces are present</li>
+            <li>More puzzle types (jigsaw, spherical, ...)</li>
+            <li>Improve performance in puzzles with many pieces</li>
             <li>Multiplayer rooms, play with friends</li>
             <li>Customizable environment and music</li>
         </ul>
